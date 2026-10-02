@@ -1,0 +1,56 @@
+# Flutter & Dart
+.dart_tool/
+.packages
+.pub/
+.pub-cache/
+build/
+**/build/
+.flutter-plugins
+.flutter-plugins-dependencies
+coverage/
+
+# iOS
+**/ios/Flutter/.last_build_id
+**/ios/Pods/
+**/ios/build/
+**/ios/.symlinks/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Runner.xcworkspace/xcuserdata
+**/ios/Runner.xcodeproj/xcuserdata
+
+# Android
+.gradle/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+**/android/build/
+local.properties
+.externalNativeBuild/
+.cxx/
+
+# macOS & Linux & Windows
+**/macos/Flutter/ephemeral/
+**/linux/Flutter/ephemeral/
+**/windows/flutter/ephemeral/
+
+# Web
+**/web/.dart_tool/
+
+# System
+.DS_Store
+*.log
+*.swp
+*.tmp
+
+# Firebase / secrets (generate locally with `flutterfire configure`)
+google-services.json
+GoogleService-Info.plist
+firebase_app_id_file.json
+.firebaserc
+.env
+*.env
+key.properties
+*.jks
+*.keystore

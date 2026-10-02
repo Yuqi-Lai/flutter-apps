@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Posts collection rules
+    match /posts/{postId} {
+      // Allow read for authenticated users
+      allow read: if request.auth != null;
+      
+      // Allow create for authenticated users
+      allow create: if request.auth != null 
+        && request.resource.data.userId == request.auth.uid;
+      
+      // Allow update for post owner or sample posts (for seeding)
+      allow update: if request.auth != null 
+        && (resource.data.userId == request.auth.uid 
+            || resource.data.userId == 'sample');
+      
+      // Allow delete for post owner or sample posts (for seeding)
+      allow delete: if request.auth != null 
+        && (resource.data.userId == request.auth.uid 
+            || resource.data.userId == 'sample');
+    }
+    
+    // Storage rules would be in storage.rules file
+  }
+}
+
